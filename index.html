@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
 <head>
     <title>About ALINA</title>
-    <!--this is the style-->
+    <!-- This is the CSS style section -->
     <style>
         body {
             background-color: #d2ddf4;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
         .three-column {
@@ -13,6 +14,7 @@
             align-items: flex-start;
             gap: 15px;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
 
         .hidden {
@@ -30,18 +32,23 @@
             color: #000;
             font-weight: bold;
         }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
-    <!--start the body-->
 <body>
+    <!-- This is the navigation bar -->
     <nav class="center">
         <a href="#" onclick="showpage('home')">Home</a>
-        <a href="#" onclick="showpage('my hobbies')">My Hobbies</a>
-        <a href="#" onclick="showpage('like&dislike')">Like & Dislike</a>
+        <a href="#" onclick="showpage('my-hobbies')">My Hobbies</a>
+        <a href="#" onclick="showpage('like-and-dislike')">Like & Dislike</a>
         <a href="#" onclick="showpage('idol')">Idol</a>
     </nav>
 
-    <!--this is the first part-->
+    <!-- Home Page -->
     <div id="home" class="page">
         <h1 style="text-align: center;">💙About ME💙</h1>
         <p style="text-align: center;">
@@ -54,7 +61,8 @@
         </p>
     </div>
 
-    <div id="my hobbies" class="page hidden">
+    <!-- My Hobbies Page -->
+    <div id="my-hobbies" class="page hidden">
         <h3>My Hobbies</h3>
         <ul>
             <li>Sleeping</li>
@@ -63,14 +71,15 @@
             <li>Making butterfly specimens</li>
             <li><b>Stay at home</b></li>
         </ul>
+        <!-- Images related to hobbies -->
         <img src="./img/fencing2.jpg" alt="fencing" width="300" height="200">
         <img src="./img/fencing.jpg" alt="fencing2" width="300" height="200">
         <img src="./img/draw.jpg" alt="draw" width="200" height="250">
         <img src="./img/butterfly.jpg" alt="butterfly" width="200" height="250">
     </div>
 
-    <!--this is the second part-->
-    <div id="like&dislike" class="page hidden">
+    <!-- Like & Dislike Page -->
+    <div id="like-and-dislike" class="page hidden">
         <h3>LIKE💗 & DISLIKE🤍</h3>
         <div class="three-column">
             <img src="./img/cat.jpg" alt="cat" width="200" height="200">
@@ -84,17 +93,19 @@
         <a href="https://v.douyin.com/Nt2hRLjJhj4/" target="_self">click here!✨</a>
 
         <p>I love ice-cream!! I usually ate them everyday before lol<br>LIFE CAN NOT WITHOUT ICE-CREAM ↓</p>
-        <img src="./img/ice cream.jpg" alt="icecream" width="400" height="400"><br>
+        <!-- Note: ensure your file name is consistent with this -->
+        <img src="./img/ice-cream.jpg" alt="icecream" width="400" height="400"><br>
         <a href="https://www.instagram.com/acquolina_tokyo?igsh=NmE2b251c3EyZW5n" target="_self">And I recommend this shop—it's so GOOD</a>
 
         <br>
         <a href="https://www.google.com/search?q=Carrots" target="_self">I hate carrots veryyy much I cannot understand why there's carrots in the diet</a>
     </div>
 
-    <!--this is the last part-->
+    <!-- Idol Page -->
     <div id="idol" class="page hidden">
         <h3>About MY FAVOURITE IDOL 推し🩵</h3>
         <p>I'm going to talk about my favourite idol.</p>
+        <!-- Images of the idol -->
         <img src="./img/zuohang1.jpg" alt="zuohang1" width="200" height="300">
         <img src="./img/zuohang2.jpg" alt="zuohang2" width="200" height="300">
         <img src="./img/zuohang3.jpg" alt="zuohang3" width="200" height="300">
@@ -109,6 +120,7 @@
             🔹ORIGINALS:《Hey Left》《一个很Dry 拽的Humorous Boy》<br>
             🔹MOVIE: 《月光武士 Moonlight Warrior》
         </p>
+        <!-- Fan accounts -->
         <p><strong><em>🌀OUR ACCOUNTS🌀</em></strong></p>
         <ol>
             <li>Instagram:<br><a href="https://www.instagram.com/zuohang_globalfansclub?igsh=NjU0OXdnb3hwaWcy" target="_blank">https://www.instagram.com/zuohang_globalfansclub</a></li>
@@ -117,24 +129,27 @@
         </ol>
     </div>
 
-    <p style="text-align: center;"><strong><em>Hope u like this homework. This is what about me!<br>THANK YOU</em></strong></p>
+    <!-- The end -->
+    <p style="text-align: center;">
+        <strong><em>Hope u like this homework. This is what about me!<br>THANK YOU</em></strong>
+    </p>
 
     <!-- JavaScript for navigation -->
     <script>
+        // Function to show a page and hide the others
         function showpage(pageId) {
             const pages = document.querySelectorAll('.page');
             pages.forEach(page => page.classList.add('hidden'));
             document.getElementById(pageId).classList.remove('hidden');
         }
 
-        // Show home by default
+        // Show home page by default
         window.onload = () => {
             showpage('home');
         };
     </script>
 </body>
 </html>
-        
 
 
 
